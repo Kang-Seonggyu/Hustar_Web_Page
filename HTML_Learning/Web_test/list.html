@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test HTML</title>
+        <meta charset="utf-8">
+        <script src="js/worker-info.js"></script>
+        <script src="js/profile.js"></script>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 id="clock">00:00</h3>
+        <div class="hello">
+            <h1>Workers Info</h1>
+        </div>
+        <div class="devide">
+            <span class="BlkBoarder">
+                <p id="lastUpdate">
+                    <strong>1 분단</strong>
+                </p>
+                <div id="profile-lists">
+                    <strong>프로필 목록</strong>
+                    <script>profilelistUpdate()</script>
+                </div>
+            </span>
+            <span class="BlkBoarder">
+                <p>
+                    <strong>2 분단</strong>
+                </p>                <input type="button" value="프로필추가" onclick="addProfile();">
+                <input type="button" value="신호값출력" onclick="lightUpdate();">
+                <div id = "weatherBox">
+                    <span id="weather"></span>
+                    <span id="where"></span>
+                </div>
+            </span>
+        </div>
+        
+    </body>
+    <script src="js/weather.js"></script>
+    <script src="js/lightCtrl.js"></script>
+    <script src="js/clock.js"></script>
+</html>
