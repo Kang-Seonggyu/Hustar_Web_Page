@@ -28,14 +28,20 @@
                 </p>                <input type="button" value="프로필추가" onclick="addProfile();">
                 <input type="button" value="신호값출력" onclick="lightUpdate();">
                 <div id = "weatherBox">
-                    <span id="weather"></span>
-                    <span id="where"></span>
+                    날씨 :
+                    <span id="weather">?</span>
+                    <span id="where">?</span>
+                </div>
+                <div>
+                    I D : <input type="text" id="loginID"><br>
+                    PW : <input type="password" id="loginPW">
+                    <button onclick="loginclick()">Log IN</button>
                 </div>
             </span>
         </div>
         
     </body>
-    <script src="js/weather.js"></script>
+    <script src="js/loginTest.js"></script>
     <script src="js/lightCtrl.js"></script>
     <script src="js/clock.js"></script>
 </html>
