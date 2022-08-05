@@ -48,10 +48,11 @@ function makeAccount(event){
     if(checkID.value == '' || checkPW.value =='' || dcheckPW.value == ''){
         alert("작성하지 않은 칸이 있습니다.");
     } else {
+        // 저장된 set가 있으면 불러오기
         if(localStorage.getItem('loginSets')) {
             loadSet = JSON.parse(localStorage.getItem('loginSets'))
         }
-        console.log(loadSet)
+        // 저장된 set의 ID와 중복확인
         for(i=0; i < loadSet.length; i++) {
             console.log(`공간${i}`)
             if(checkID.value == loadSet[i]['id']) {
@@ -62,15 +63,15 @@ function makeAccount(event){
                 return 0;
             }
         }
-            if (checkPW.value != dcheckPW.value){
+        if (checkPW.value != dcheckPW.value){
                 alert("비밀번호가 일치하지 않습니다.");
                 return 0;
-            }
-            else {
+        }
+        else {
                 registerLoginSets(checkID.value, checkPW.value);
                 return 0;
-            }
         }
+    }
     /* 원래 코드
     else {
         if(localStorage.getItem(checkID.value) != null){
