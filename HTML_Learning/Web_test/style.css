@@ -2,7 +2,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
+canvas {
+    float : left;
+    width: 50% !important;
+    height: 300px !important;
+}
 .BlkBoarder {
     padding: 4px;
     padding-bottom: 8px;
