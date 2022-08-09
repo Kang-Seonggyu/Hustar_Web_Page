@@ -63,7 +63,7 @@
                                     rgba(0, 0, 0, 0));
     box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
-    grid-template-rows: 120px 75px 1fr;
+    grid-template-rows: 110px 75px 1fr;
 }
 #enlargeBox:hover {
     background-color: rgb(183, 183, 183);
@@ -75,23 +75,46 @@
 .enlarge_ProfileList {
     display : grid;
     height : 80px;
-    grid-template-columns: 95px 200px 1fr;
+    grid-template-columns: 140px 200px 1fr;
 }
 #enlargeImg {
-    margin-left: 0px;
-    margin-top: 20px;
+    margin-left: 20px;
+    margin-top: 23px;
     border: solid 2px black;
+    width: 90px;
+    height: 90px;
 }
-#info1 { text-align: left;}
-#info2 { text-align: left;}
+#info1 { 
+    text-align: left;
+    margin-top: 8px;
+}
+#info2 { 
+    text-align: left;
+    margin-top: 8px;
+}
 .enlargeSignals {
+    text-align: center;
     vertical-align: top; 
     height: 75px !important; 
     padding-top: 15px;
 }
 .w_icon {
+    padding-top: 10px;
+    padding-left: 10px;
     width: 50px;
     height: 50px;
+}
+#enlarge_w1 {
+    vertical-align: top;
+}
+#enlarge_w2 {
+    vertical-align: top;
+}
+#enlarge_w3 {
+    vertical-align: top;
+}
+#enlarge_w4 {
+    vertical-align: top;
 }
 
 canvas{
