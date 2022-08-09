@@ -12,7 +12,7 @@ let myLineChart1 = new Chart(ctx1, {
         datasets: [{
         label: "심박수",
         lineTension: 0.5,
-        backgroundColor: "rgba(2,0,216,0.2)",
+        backgroundColor: "rgba(2,200,216,0.2)",
         borderColor: "rgba(2,117,0,1)",
         pointRadius: 5,
         pointBackgroundColor: "rgba(200,117,216,1)",
@@ -27,7 +27,7 @@ let myLineChart1 = new Chart(ctx1, {
     options: {
         title : {
         display :true,
-        fontSize : 15,
+        fontSize : 45,
         text : '최근 2주 심박수평균'
         },
         scales: {
@@ -39,14 +39,16 @@ let myLineChart1 = new Chart(ctx1, {
             display: false
             },
             ticks: {
-            maxTicksLimit: 7  // X축 선의 갯수 (0포함)
+                fontSize : 30,
+                maxTicksLimit: 7  // X축 선의 갯수 (0포함)
             }
         }],
         yAxes: [{
             ticks: {
-            min: 0,
-            max: input_Y1Label,
-            maxTicksLimit: 7  // Y축 선의 갯수 (0포함)
+                fontSize : 30,   
+                min: 0,
+                max: input_Y1Label,
+                maxTicksLimit: 7  // Y축 선의 갯수 (0포함)
             },
             gridLines: {
             color: "rgba(0, 0, 0, .125)",
@@ -65,7 +67,7 @@ const input_Y2Label = 150;
 // 넣을 데이터 값 설정.
 let input_2Data = [100, 80, 95, 104, 80, 109, 90, 92, 105, 87, 99, 98, 104, 121]
 
-let ctx2 = document.getElementById("stressChart");
+let ctx2 = document.getElementById("bloodPressureChart");
 let myLineChart2 = new Chart(ctx2, {
     type: 'line',
     data: {
@@ -88,7 +90,7 @@ let myLineChart2 = new Chart(ctx2, {
     options: {
         title : {
         display :true,
-        fontSize : 15,
+        fontSize : 45,
         text : '최근 2주 스트레스'
         },
         scales: {
@@ -100,14 +102,16 @@ let myLineChart2 = new Chart(ctx2, {
             display: false
             },
             ticks: {
-            maxTicksLimit: 7  // X축 선의 갯수 (0포함)
+                fontSize : 30,
+                maxTicksLimit: 7  // X축 선의 갯수 (0포함)
             }
         }],
         yAxes: [{
             ticks: {
-            min: 0,
-            max: 200,
-            maxTicksLimit: 7  // Y축 선의 갯수 (0포함)
+                fontSize : 30,  
+                min: 0,
+                max: 200,
+                maxTicksLimit: 7  // Y축 선의 갯수 (0포함)
             },
             gridLines: {
             color: "rgba(0, 0, 0, .125)",
@@ -118,4 +122,18 @@ let myLineChart2 = new Chart(ctx2, {
         display: false
         }
     }
+});
+
+
+var ctx3 = document.getElementById("stressChart");
+var myPieChart3 = new Chart(ctx3, {
+    type: 'pie',
+    data: {
+        labels: ["Blue", "Red", "Yellow", "Green","purple"],
+        labelFontSize : 30,
+        datasets: [{
+        data: [12.21, 15.58, 11.25, 8.32, 10.03],
+        backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745', 'purple'],
+        }],
+    },
 });

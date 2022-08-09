@@ -7,3 +7,7 @@ window.addEventListener('DOMContentLoaded', event => {
         new simpleDatatables.DataTable(datatablesSimple);
     }
 });
+
+const warningLog_input = document.getElementById('log_input');
+
+//warningLog_input.appendChild()
