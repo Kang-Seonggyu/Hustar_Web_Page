@@ -1,6 +1,7 @@
 workersMount = localStorage.getItem("workersMount");
 
 
+
 function lightUpdate() {
     for (i = 0; i < workersMount*4; i++)  {
         // Index 값     : n번 째 사람
@@ -34,24 +35,30 @@ function lightUpdate() {
     }   
 }
 
+const warning_light_color = 'red';
+const caution_ligth_color = 'orange';
+const safe_light_color = 'rgb(16, 242, 16)';
+
 //심박수 신호 제어
 function light1(index, heartRate, WantToChangeSingal) {
     if (heartRate>=150) {
-        WantToChangeSingal.style.background = 'red';
-        warning_Write(1,index,heartRate)
+        WantToChangeSingal.style.background = warning_light_color;
+        warning_Write(1,index,heartRate);
     }
     else if (heartRate>=120) {
-        WantToChangeSingal.style.background = 'orange';
+        WantToChangeSingal.style.background = caution_ligth_color;
+        caution_Write(1, index, heartRate);
     }
     else if (heartRate>=80) {
-        WantToChangeSingal.style.background = 'rgb(16, 242, 16)';
+        WantToChangeSingal.style.background = safe_light_color;
     }
     else if (heartRate>=55) {
-        WantToChangeSingal.style.background = 'orange';
+        WantToChangeSingal.style.background = caution_ligth_color;
+        caution_Write(1, index, heartRate);
     }
     else {
-        WantToChangeSingal.style.background = 'red';
-        warning_Write(1,index,heartRate)
+        WantToChangeSingal.style.background = warning_light_color;
+        warning_Write(1,index,heartRate);
     }
     
 }
@@ -59,20 +66,22 @@ function light1(index, heartRate, WantToChangeSingal) {
 // 혈압 신호 제어
 function light2(index, BloodPressure, WantToChangeSingal) {
     if (BloodPressure>=140) {
-        WantToChangeSingal.style.background = 'red';
+        WantToChangeSingal.style.background = warning_light_color;
         warning_Write(2,index,BloodPressure)
     }
     else if (BloodPressure>=120) {
-        WantToChangeSingal.style.background = 'orange';
+        WantToChangeSingal.style.background = caution_ligth_color;
+        caution_Write(2, index, BloodPressure);
     }
     else if (BloodPressure>=80) {
-        WantToChangeSingal.style.background = 'rgb(16, 242, 16)';
+        WantToChangeSingal.style.background = safe_light_color;
     }
     else if (BloodPressure>=55) {
-        WantToChangeSingal.style.background = 'orange';
+        WantToChangeSingal.style.background = caution_ligth_color;
+        caution_Write(2, index, BloodPressure);
     }
     else {
-        WantToChangeSingal.style.background = 'red';
+        WantToChangeSingal.style.background = warning_light_color;
         warning_Write(2,index,BloodPressure)
     }   
 }
@@ -80,13 +89,14 @@ function light2(index, BloodPressure, WantToChangeSingal) {
 // 혈중산소포화도 신호 제어
 function light3(index, O2, WantToChangeSingal) {
     if (O2>=80) {
-        WantToChangeSingal.style.background = 'rgb(16, 242, 16)';
+        WantToChangeSingal.style.background = safe_light_color;
     }
     else if (O2>=60) {
-        WantToChangeSingal.style.background = 'orange';
+        WantToChangeSingal.style.background = caution_ligth_color;
+        caution_Write(3, index, O2);
     }
     else {
-        WantToChangeSingal.style.background = 'red';
+        WantToChangeSingal.style.background = warning_light_color;
         warning_Write(3,index,O2)
     } 
 }
@@ -94,14 +104,15 @@ function light3(index, O2, WantToChangeSingal) {
 // 스트레스 신호 제어
 function light4(index, Stress, WantToChangeSingal) {
     if (Stress>=80) {
-        WantToChangeSingal.style.background = 'red';
+        WantToChangeSingal.style.background = warning_light_color;
         warning_Write(4,index,Stress)
     }
     else if (Stress>=60) {
-        WantToChangeSingal.style.background = 'orange';
+        WantToChangeSingal.style.background = caution_ligth_color;
+        caution_Write(4, index, Stress);
     }
     else {
-        WantToChangeSingal.style.background = 'rgb(16, 242, 16)';
+        WantToChangeSingal.style.background = safe_light_color;
         
     } 
 }

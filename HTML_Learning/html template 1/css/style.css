@@ -1,3 +1,6 @@
+#cardMinWidth {
+    min-width: 665px;
+}
 #profile-lists {
     margin: 1px;
     overflow:auto;
@@ -12,11 +15,10 @@
     border-radius: 10px;
     background-color: rgb(202, 202, 202);
     background-image: linear-gradient(to right,
-                                    rgba(0, 0, 0, .2),
-                                    rgba(0, 0, 0, .2) 30%,
-                                    rgba(255, 255, 255, 0));
-    
-    background-color: rgb(242, 242, 242);
+                                    rgba(0, 0, 0, .4),
+                                    rgba(122, 122, 122, .5) 10%,
+                                    rgba(255, 255, 255, 1));
+    background-color : rgb(242, 242, 242);
 }
 .profile-list:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
@@ -120,4 +122,11 @@ canvas{
     float : left;
     width: 50% !important;
     height: 180px !important;
+}
+
+warningLogLight {
+    color : red;
+}
+cautionLogLight {
+    color : orange;
 }
