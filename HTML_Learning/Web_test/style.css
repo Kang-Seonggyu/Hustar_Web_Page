@@ -105,3 +105,85 @@ canvas {
 }
 #info1 { text-align: left;}
 #info2 { text-align: left;}
+
+#chartArea{
+    width : 1000px;
+    height: 650px;
+    border : solid 2px black;
+}
+#ani1{
+    margin-top: 0px;
+    margin-left: 30px;
+    background-color: rgba(42, 250, 0, 0.144);
+    border-radius: 50px;
+    border : solid 1px black;
+    width : 220px;
+    height: 99px;
+}
+#ani2{
+    margin-top: 0px;
+    margin-left: 30px;
+    background-color: rgba(42, 250, 0, 0.144);
+    border-radius: 50px;
+    border : solid 1px black;
+    width : 220px;
+    height: 99px;
+}
+
+anima {
+    position: absolute;
+    height:100px; 
+    width:100px; 
+    border-radius:50px; 
+    background-color: blue;
+    animation-name: toggleBT;
+    animation-duration: 2s;
+}
+@keyframes toggleBT {
+    from { transform: translate(30px,0); }
+    to { transform: translate(150px, 0px); }
+}
+anima2 {
+    position: absolute;
+    height:100px; 
+    width:100px; 
+    border-radius:50px; 
+    background-color: rgb(0, 207, 243);
+    animation: toggleBT 1s forwards;
+}
+
+.toggleSwitch {
+    width: 6rem;
+    height: 3rem;
+    display: block;
+    position: relative;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem 3px rgba(0 0 0 / 15%);
+    cursor: pointer;
+  }
+  
+  .toggleSwitch .toggleButton {
+    width: 2.6rem;
+    height: 2.6rem;
+    position: absolute;
+    top: 50%;
+    left: .2rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #81ff76;
+  }
+  
+  /* 체크박스가 체크되면 변경 이벤트 */
+  .toggleSwitch.active {
+    background: #81ff76;
+  }
+  
+  .toggleSwitch.active .toggleButton {
+    left: calc(100% - 2.8rem);
+    background: #fff;
+  }
+  
+  .toggleSwitch, .toggleButton {
+    transition: all 0.2s ease-in;
+  }
