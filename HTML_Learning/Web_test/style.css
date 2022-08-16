@@ -161,9 +161,9 @@ anima2 {
     background-color: #fff;
     box-shadow: 0 0 1rem 3px rgba(0 0 0 / 15%);
     cursor: pointer;
-  }
-  
-  .toggleSwitch .toggleButton {
+}
+
+.toggleSwitch .toggleButton {
     width: 2.6rem;
     height: 2.6rem;
     position: absolute;
@@ -172,18 +172,18 @@ anima2 {
     transform: translateY(-50%);
     border-radius: 50%;
     background: #81ff76;
-  }
-  
-  /* 체크박스가 체크되면 변경 이벤트 */
-  .toggleSwitch.active {
+}
+
+/* 체크박스가 체크되면 변경 이벤트 */
+.toggleSwitch.active {
     background: #81ff76;
-  }
+}
   
-  .toggleSwitch.active .toggleButton {
+.toggleSwitch.active .toggleButton {
     left: calc(100% - 2.8rem);
     background: #fff;
-  }
-  
-  .toggleSwitch, .toggleButton {
+}
+
+.toggleSwitch, .toggleButton {
     transition: all 0.2s ease-in;
-  }
+}
