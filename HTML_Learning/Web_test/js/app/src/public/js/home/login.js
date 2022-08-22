@@ -13,9 +13,6 @@ function login() {
         PW : inputPW.value
     };
 
-    console.log(req);
-    console.log(JSON.stringify(req));
-
     fetch("/login", {
         method : "POST",
         headers : {
@@ -23,4 +20,7 @@ function login() {
         },
         body : JSON.stringify(req)
     })
+    .then((res) => res.json())
+    .then((res) => console.log(res));
+
 }
