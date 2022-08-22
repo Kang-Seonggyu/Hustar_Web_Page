@@ -1,13 +1,34 @@
 "use strict";
 
 const output = {
-    home : (req, res)=> {
-        res.render("home/index")
-    },    
-    login : (req, res) => {
-        res.render("home/login")
-    },    
-}
+    home:(req, res) =>{
+        res.render("home/index");
+    },
+    
+    login:(req, res) =>{
+        res.render("home/login");
+    },
+    
+    register:(req, res) =>{
+        res.render("home/register");
+    },
+    
+    video1:(req, res) =>{
+        res.render("home/video1");
+    },
+    
+    video2:(req, res) =>{
+        res.render("home/video2");
+    },
+    
+    enlarge:(req, res) =>{
+        res.render("home/enlarge");
+    },
+
+    warning_log : (req, res) =>{
+        res.render("home/warning_log");
+    },
+};
 
 const users = {
     id : ["admin","master","jokekim"],
