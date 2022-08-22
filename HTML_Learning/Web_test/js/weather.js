@@ -1,5 +1,6 @@
 const weather = document.querySelector("#weather");
 const where = document.querySelector("#where");
+const humid = document.querySelector("#humid");
 const API_KEY = "916677328d9c582c4848e517f8a6c942";
 
 function getSuccess(position) {
@@ -17,7 +18,8 @@ function getSuccess(position) {
         .then((response) => response.json())    // 응답한 것을 json파일로 처리. => 내용 추출
         .then((data) => {                       // 추출한 내용에서 Data 선택
             where.innerText = data.name;
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+            weather.innerText = `${data.weather[0].main} / ${data.main.temp} / ${data.sys.country}` ;
+            humid.innerText = `${data.main.humidity} %`;
         });
 }
 
