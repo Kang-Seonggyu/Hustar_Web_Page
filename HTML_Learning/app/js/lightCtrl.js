@@ -49,7 +49,7 @@ function light1(index, heartRate, WantToChangeSingal) {
         WantToChangeSingal.style.background = caution_ligth_color;
         caution_Write(1, index, heartRate);
     }
-    else if (heartRate>=80) {
+    else if (heartRate>=70) {
         WantToChangeSingal.style.background = safe_light_color;
     }
     else if (heartRate>=55) {

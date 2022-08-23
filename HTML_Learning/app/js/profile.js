@@ -20,7 +20,7 @@ function addProfile() {
     let new_img = document.createElement('img');                
     new_img.setAttribute('class','profileImage');               // image 태그 속성 설정
     new_img.setAttribute('id',workers[pTagCount].name);         // image 이름 값 설정
-    new_img.src = "profile/"+workers[pTagCount].name+".jpg";      // image 태그 위치값 입력
+    new_img.src = "profile/"+workers[pTagCount].name+".png";      // image 태그 위치값 입력
     new_img.onerror = function(){this.src = "profile/account.png"}; // image 없을 시 기본 이미지 출력
 
     // ⒝새로운 p 태그1 (정보1)와 입력 값

@@ -5,3 +5,8 @@ $toggle.onclick = () => {
 }
 
 
+const vid = document.querySelector('#videooo')
+console.log(vid);
+console.dir(vid);
+
+vid.playbackRate = 8.5;
