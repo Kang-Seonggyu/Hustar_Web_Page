@@ -74,23 +74,3 @@ workers.push(Human4 = new WorkerInfo("문장혁",28,"2조","파트원","010-0000
 workers.push(Human5 = new WorkerInfo("이찬영",8,"1조","수면부족","010-0000-0000","숙소",43,78,49,4))
 
 workersMount= workers.length
-
-
-
-
-
-
-
-
-
-let test =0;
-
-localStorage.setItem("workersMount",workersMount);
-setInterval(function() {
-    ChangeData(Human1, h1_w1list[test], h1_w2list[test], h1_w3list[test], h1_w4list[test]);
-    ChangeData(Human2, h2_w1list[test], h2_w2list[test], h2_w3list[test], h2_w4list[test]);
-    ChangeData(Human3, h3_w1list[test], h3_w2list[test], h3_w3list[test], h3_w4list[test]);
-    ChangeData(Human4, h4_w1list[test], h4_w2list[test], h4_w3list[test], h4_w4list[test]);
-    test++;
-    lightUpdate();
-}, 2000); // 1000ms 마다 -> 1초 마다 갱신

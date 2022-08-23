@@ -38,11 +38,12 @@ const warning_light_color = 'red';
 const caution_ligth_color = 'orange';
 const safe_light_color = 'rgb(16, 242, 16)';
 
-// 정보 표시를 할 사람의 Index
+// 정보 표시를 할 사람의 이름
 let workerSelect = localStorage.getItem("workerSelect")
+// 정보 표시를 할 사람의 Index
 let selectIndex = localStorage.getItem("selectIndex")
 
-enlargeIMG.src = `profile/${workerSelect}.jpg`;
+enlargeIMG.src = `profile/${workerSelect}.png`;
 enlargeIMG.onerror = function(){this.src = "profile/account.png"}; // image 없을 시 기본 이미지 출력
 
 updateEnlarge()
@@ -74,7 +75,7 @@ function enlargeLight1(index, heartRate, WantToChangeSingal) {
     else if (heartRate>=120) {
         WantToChangeSingal.style.background = caution_ligth_color;
     }
-    else if (heartRate>=80) {
+    else if (heartRate>=70) {
         WantToChangeSingal.style.background = safe_light_color;
     }
     else if (heartRate>=55) {

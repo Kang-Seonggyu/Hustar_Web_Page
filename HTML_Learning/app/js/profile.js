@@ -82,5 +82,5 @@ function goTo_EnlargePage() {
     localStorage.setItem("selectIndex",selectIndex);
 
     const link = 'enlarge.html';
-    window.open(link,'vucket',"width=800, height=600");
+    window.open(link,'vucket',"width=800, height=600, left=300px, top=300px ");
 }
