@@ -49,7 +49,7 @@ function WriteInfo1(index) {
     document.write('이　　름 : ',workers[index].name)
     document.write('<br>소　　속 : ',workers[index].part)
     document.write('<br>전화번호 : ',workers[index].phone,'<br>')
-}
+} 
 function WriteInfo2(index) {
     document.write('나　　이 : ',workers[index].age)
     document.write('<br>직　　책 : ',workers[index].posit)
@@ -74,3 +74,4 @@ workers.push(Human4 = new WorkerInfo("문장혁",28,"2조","파트원","010-0000
 workers.push(Human5 = new WorkerInfo("이찬영",8,"1조","수면부족","010-0000-0000","숙소",43,78,49,4))
 
 workersMount= workers.length
+localStorage.setItem("workersMount",workersMount)
